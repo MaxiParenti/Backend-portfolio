@@ -32,6 +32,4 @@ build/
 ### VS Code ###
 .vscode/
 /nbproject/
-src/main/java/com/portfolio/mnp/security/Repository/IRolRepository.java
-src/main/java/com/portfolio/mnp/security/Dto/JwtDTO.java
-src/main/java/com/portfolio/mnp/security/Repository/IUsuarioRepository.java
+
