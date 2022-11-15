@@ -42,11 +42,11 @@ public class sHys {
         rhys.deleteById(id);
     }
     
-    public boolean existById(int id){
+    public boolean existsById(int id){
         return rhys.existsById(id);
     }
     
-    public boolean existByNombre(String nombre){
-        return rhys.existByNombre(nombre);
+    public boolean existsByNombre(String nombre){
+        return rhys.existsByNombre(nombre);
     }
 }

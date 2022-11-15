@@ -16,5 +16,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 public interface rHys extends JpaRepository<hys, Integer>{
     Optional<hys> findByNombre(String nombre);
     
-    public boolean existByNombre(String nombre);
+    public boolean existsByNombre(String nombre);
 }

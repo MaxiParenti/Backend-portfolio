@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.portfolio.mnp.security.service;
+package com.portfolio.mnp.service;
 
 import com.portfolio.mnp.entity.educacion;
 import com.portfolio.mnp.repository.rEducacion;

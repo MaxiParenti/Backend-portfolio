@@ -46,7 +46,7 @@ public class cHys {
         if (StringUtils.isBlank(DtoHys.getNombre())) {
             return new ResponseEntity(new Mensaje("El nombre es obligatorio"), HttpStatus.BAD_REQUEST);
         }
-        if (shys.existByNombre(DtoHys.getNombre())) {
+        if (shys.existsByNombre(DtoHys.getNombre())) {
             return new ResponseEntity(new Mensaje("Esa Skill ya existe"), HttpStatus.BAD_REQUEST);
         }
 
@@ -58,11 +58,11 @@ public class cHys {
     @PutMapping("/update/{id}")
     public ResponseEntity<?> update(@PathVariable("id") int id, @RequestBody dtoHys DtoHys) {
         //validar id's
-        if (!shys.existById(id)) {
+        if (!shys.existsById(id)) {
             return new ResponseEntity(new Mensaje("El id no existe"), HttpStatus.BAD_REQUEST);
         }
         //compara los nombres para saber si se repite
-        if (shys.existByNombre(DtoHys.getNombre()) && shys.getByNombre(DtoHys.getNombre()).get().getId() != id) {
+        if (shys.existsByNombre(DtoHys.getNombre()) && shys.getByNombre(DtoHys.getNombre()).get().getId() != id) {
             return new ResponseEntity(new Mensaje("Esa Skill ya existe"), HttpStatus.BAD_REQUEST);
         }
         //no tiene que estar vacio
@@ -82,7 +82,7 @@ public class cHys {
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> delete(@PathVariable("id") int id) {
         //validar id's
-        if (!shys.existById(id)) {
+        if (!shys.existsById(id)) {
             return new ResponseEntity(new Mensaje("El id no existe"), HttpStatus.BAD_REQUEST);
         }
         shys.delete(id);
@@ -91,7 +91,7 @@ public class cHys {
 
     @GetMapping("/detail/{id}")
     public ResponseEntity<hys> getById(@PathVariable("id") int id) {
-        if (!shys.existById(id)) {
+        if (!shys.existsById(id)) {
             return new ResponseEntity(new Mensaje("no existe"), HttpStatus.NOT_FOUND);
         }
         hys Hys = shys.getOne(id).get();

@@ -7,7 +7,7 @@ package com.portfolio.mnp.controller;
 import com.portfolio.mnp.dto.dtoExp;
 import com.portfolio.mnp.entity.experiencia;
 import com.portfolio.mnp.security.controller.Mensaje;
-import com.portfolio.mnp.security.service.sExperiencia;
+import com.portfolio.mnp.service.sExperiencia;
 import java.util.List;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
