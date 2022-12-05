@@ -18,4 +18,3 @@ public interface rHys extends JpaRepository<hys, Integer>{
     
     public boolean existsByNombre(String nombre);
 }
-//terminado
